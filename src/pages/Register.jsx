@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Add from "../img/imgs/camera.png"
+import Add from "../img/image.svg"
 
 const Register = () => {
   return (
