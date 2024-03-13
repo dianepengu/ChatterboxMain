@@ -7,6 +7,6 @@ function App() {
     <Home/> 
   );
 }
-//panget lahat
+//panget lahatt
 
 export default App;
