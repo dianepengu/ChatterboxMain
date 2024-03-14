@@ -14,6 +14,15 @@
     }
 }
 
+.no-change {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .no-change:visited {
+    color:#c27f5d;
+    text-decoration: none;
+  }
 
 .formContainer {
     background-color: #faf3e1;
@@ -52,6 +61,7 @@
                 border-bottom: 1px solid #985e40 ;
                 width: 250px;
                 background-color: #222222;
+                color: #ffff;
                 
             &::placeholder{
                 color: #b3a78b;

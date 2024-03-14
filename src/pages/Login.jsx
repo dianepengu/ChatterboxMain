@@ -1,20 +1,23 @@
 
 import React from 'react';
-import Add from "../img/image.svg"
+
+
 
 const Login = () => {
   return (
-    <div className='formContainer'>      
+    
+    <div className='formContainer'>
+            
         <div className='formWrapper'>
             <span className='logo'>Chatterbox</span>
             <span className='title'>Sign in</span>
             <form>
-                <input type="email" placeholder='email'/>
-                <input type="password" placeholder='password'/>
+                <input type="email" placeholder='Email'/>
+                <input type="password" placeholder='Password'/>
                
                 <button>Sign in</button>
             </form>
-            <p>Don't have an account? Sign up</p>
+            <p>Don't have an account? <a href="./register" className="no-change">Sign up</a></p>
         </div>
     </div>
   );
