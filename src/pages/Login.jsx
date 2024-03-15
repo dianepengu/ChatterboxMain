@@ -1,24 +1,30 @@
+// Login.js
+import React, { useState } from 'react';
+import firebase from 'firebase/app'; // Import Firebase app
+import 'firebase/auth'; // Import authentication
 
-import React from 'react';
-import Add from "../img/image.svg"
+function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-const Login = () => {
+  const handleLogin = async () => {
+    try {
+      await firebase.auth().signInWithEmailAndPassword(email, password);   
+      window.location.href = '/home';//home page puntang login
+    } catch (error) {
+      console.error('Login error:', error);
+    }
+  };
+
   return (
-    <div className='formContainer'>      
-        <div className='formWrapper'>
-            <span className='logo'>Chatterbox</span>
-            <span className='title'>Sign in</span>
-            <form>
-                <input type="email" placeholder='email'/>
-                <input type="password" placeholder='password'/>
-               
-                <button>Sign in</button>
-            </form>
-            <p>Don't have an account? Sign up</p>
-        </div>
+    <div>
+      <h2>Login</h2>
+      <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Email" />
+      <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Password" />
+      <button onClick={handleLogin}>Login</button>
+      <p>Don't have an account? <a href="/register">Register</a></p>
     </div>
   );
-};
-
+}
 
 export default Login;
