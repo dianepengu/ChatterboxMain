@@ -89,6 +89,7 @@ function Google() {
 
 <div className='formContainer'>
   <div className='formWrapper'>
+  <img src='./image/favicon.png' alt="ChatterBox" />;
     <span className='ChatterLogo'>ChatterBox</span>
     <button className='login-button' onClick={handleGoogleLogin}>Login with Google</button>
   </div>
