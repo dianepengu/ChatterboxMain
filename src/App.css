@@ -6,15 +6,8 @@
   background-color: #faf3e1;
 }
 
-.formContainer {
-  background-color: #faf3e1;
-  height: 100vh;
-  width: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-}
+
   .formWrapper{
       background-color: #222222;
       padding: 20px 60px;
@@ -53,11 +46,11 @@
   .user-info {
     font-weight: bold;
     margin-bottom: 10px;
-    color: #222222;
+    color: #faf3e1;
   }
   
   .message-container {
-    max-height: 300px;
+    padding: 30px;
     overflow-y: auto;
   }
   
@@ -85,7 +78,7 @@
   }
   
   .message.sent .message-text {
-    background-color: #F5E7C6;
+    background-color: #985E40;
   }
   
   .input-container {
@@ -132,3 +125,13 @@
     cursor: pointer;
     margin-right: 10px; /* Add margin-right */
   }
+
+  .ChatBox{
+    border:2px solid black;
+    background: #222222;
+  }
+
+  .ChatterLogo{
+    font-weight: bold;
+    
+    } 

@@ -3,6 +3,7 @@ import './App.css';
 import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import { getFirestore, onSnapshot, collection, addDoc, orderBy, query, serverTimestamp } from 'firebase/firestore';
 import { auth, app } from './firebase';
+import './index.css'
 
 const db = getFirestore(app);
 
@@ -55,9 +56,9 @@ function Google() {
 
   return (
     
-    <div className='app-container'>
+    <div className='formContainer'>
       {user ? (
-        <div className='chat-container'>
+        <div className='formWrapper'>
           <div className='user-info'>Logged in as {user.displayName}</div>
           <div className='message-container'>
             {messages.map(msg => (
@@ -89,7 +90,7 @@ function Google() {
 
 <div className='formContainer'>
   <div className='formWrapper'>
-    <span className='logo'>ChatterBox</span>
+    <span className='ChatterLogo'>ChatterBox</span>
     <button className='login-button' onClick={handleGoogleLogin}>Login with Google</button>
   </div>
 </div>
