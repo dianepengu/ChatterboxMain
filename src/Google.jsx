@@ -29,7 +29,7 @@ function Google() {
       setUser(user);
     });
   }, []);
-
+// To get the uid,avatar,name,message
   const sendMessage = async () => {
     await addDoc(collection(db, 'messages'), {
       uid: user.uid,
@@ -42,7 +42,7 @@ function Google() {
     setNewMessage('');
   }
 
-
+//To get the login credentials
   const handleGoogleLogin = async () => {
     const provider = new GoogleAuthProvider();
 
@@ -55,7 +55,7 @@ function Google() {
   }
 
   return (
-    
+    // The Chat Room
     <div className='formContainer'>
       {user ? (
         <div className='formWrapper'>
@@ -72,13 +72,12 @@ function Google() {
           </div>
           <div className='input-container'>
 
-
+    {/* This is where the message is being input */}
   <input
     className='message-input'
     value={newMessage}
     onChange={e => setNewMessage(e.target.value)}
-    placeholder='Type your message...'
-  />
+    placeholder='Type your message...'/>
   {/* <span role='img' aria-label='Smiley' className='smiley-emoji'></span> */}
   <button className='send-button' onClick={sendMessage}>Send Message</button>
   <button className='logout-button' onClick={() => auth.signOut()}>Logout</button>
